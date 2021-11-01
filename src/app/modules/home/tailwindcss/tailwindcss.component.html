@@ -2,28 +2,18 @@
 <div class="relative mt-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-prose mx-auto">
     <h1>
-      <span class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">Tailwind
-        CSS</span>
-      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">A set of classes
-        already available?</span>
+      <span class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">{{ 'HOME_TAILWIND_CSS.TAILWIND_CSS' | translate }}</span>
+      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">{{ 'HOME_TAILWIND_CSS.A_SET_OF_CLASSES' | translate }}</span>
     </h1>
   </div>
   <div class="mt-6 mx-auto">
-    <p>For those unfamiliar with Tailwind CSS, it is a highly customisable low-level CSS framework with helper classes
-      for almost every CSS rule.
-      Basically, an Angular project is composed of a set of modules containing components. Each component has a
-      TypeScript file (.ts), an HTML file (.html) and a CSS, SCSS or SASS file (.css, .scss, .sass) depending on the
-      design choice. With Tailwind, you can save a lot of effort by not having to create your own CSS classes as they
-      are already present in most cases directly in Tailwind.
-    </p>
+    <p>{{ 'HOME_TAILWIND_CSS.FOR_THOSE_UNFAMILIAR' | translate }}</p>
   </div>
   <div class="mt-6 mx-auto">
     <tw-alert [type]="'info'" [appearance]="'border'">
-      <span twAlertTitle>Info alert</span>
-      For those wondering about the final size of the CSS file after the project
-      has been compiled, don't worry 😊<br>
-      You can set up a purge system with Tailwind to remove all CSS classes that are not used in the project
-      during the build which will greatly reduce the final size of the CSS file.
+      <span twAlertTitle>{{ 'ALERT.INFO' | translate }}</span>
+      {{ 'HOME_TAILWIND_CSS.FOR_THOS_WONDERING' | translate }}<br>
+      {{ 'HOME_TAILWIND_CSS.YOU_CAN_SET_UP_A_PURGE' | translate }}
     </tw-alert>
   </div>
 </div>
