@@ -44,7 +44,7 @@
         "DIFFICULT_TO_MAINTAIN" : "Difficile à maintenir sur un projet de taille moyenne à grande mais facile à mettre en place ce qui permet de gagner beaucoup de temps sur un petit projet.",
         "ONE_MODULE_PER_COMPONENENT" : "Un module par composant",
         "EACH_COMPONENT_HAS_ITS_OWN_MODULE" : "Chaque composant possède son propre module et uniquement ses dépendances. Il s'agit d'une architecture souvent utilisée lors de la création d'une bibliothèque de composants.",
-        "ONE_MODULE_PER_FEATURE" : "Un module par fonctionnalité.",
+        "ONE_MODULE_PER_FEATURE" : "Un module par fonctionnalité",
         "EACH_MODULE_HAS_ONLY_THE_COMPONENTS" : "Chaque module a uniquement les composants et les dépendances dont il a besoin. Cette architecture est probablement la plus connue dans le monde Angular.",
         "NORMALLY_IF_IT_WAS_ONLY" : "Normalement, s'il ne s'agissait que de créer une petite application pour tester une API, j'aurais certainement utilisé l'architecture \"Tout dans un seul module\" puisque le projet est relativement petit et peu susceptible d'évoluer. Cependant, j'ai décidé de choisir l'architecture \"Un module par fonctionnalité\" car c'est probablement l'architecture qui sera utilisée dans la plupart des cas.",
         "MOREOVER_AS_I_SAID" : "De plus, comme je l'ai dit au début, l'idée de ce projet est de fournir un kit de démarrage pour les futurs projets Angular. 😉",
