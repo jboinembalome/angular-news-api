@@ -1,17 +1,14 @@
 <div class="relative mt-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-prose mx-auto">
     <h1>
-      <span class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">Technology</span>
-      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">What libraries
-        are used?</span>
+      <span class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">{{ 'HOME.TECHNOLOGY' | translate }}</span>
+      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">{{ 'HOME.WHAT_LIBRARIES_ARE_USED' | translate }}</span>
     </h1>
   </div>
   <div class="mt-6 mx-auto">
     <tw-alert [type]="'info'" [appearance]="'border'">
-      <span twAlertTitle>Info alert</span>
-      It is recommended that you regularly update your project packages. Keeping
-      your Angular application up to date allows you to take advantage of new cutting-edge features, as well as
-      optimizations and bug fixes.
+      <span twAlertTitle>{{ 'ALERT.INFO' | translate }}</span>
+      {{ 'HOME.IT_IS_RECOMMENDED_THAT_YOU_REGULARLY_UPDATE' | translate }}
     </tw-alert>
   </div>
   <div class="mt-6 mx-auto">
@@ -19,8 +16,7 @@
       <li>Angular: <strong class="text-primary-500">12.2.11</strong></li>
       <li>Angular Material: <strong class="text-primary-500">12.2.11</strong></li>
       <li>Tailwind: <strong class="text-primary-500">2.2.17</strong></li>
-      <li>Ngx-highlightjs: <strong class="text-primary-500">5.0.0</strong> (This package is only used to display
-        highlighted code on this page)</li>
+      <li>Ngx-highlightjs: <strong class="text-primary-500">5.0.0</strong> ({{ 'HOME.THIS_PACKAGE_IS_ONLY_USED_TO_DISPLAY' | translate }})</li>
     </ul>
   </div>
 </div>

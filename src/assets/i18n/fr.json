@@ -1,0 +1,102 @@
+{
+    "HOME": {
+        "WELCOME_TO_YOU": "Bienvenue à vous !",
+        "THANK_YOU_FOR_DOWNLOADING": "Merci d'avoir téléchargé ce projet 👍",
+        "WILL_FIND_A_SMALL_DOCUMATION": "Sur cette page, vous trouverez une petite documentation sur ce projet.",
+        "INTRODUCTION": "INTRODUCTION",
+        "WHY_DID_I_CREATE_THIS_PROJECT": "Pourquoi ai-je créé ce projet ?",
+        "THIS_PROJECT_AIMS_TO_DISCOVER_THE": "Ce projet a pour but de découvrir l'API",
+        "AND_INTEGRATE_IT_INTO_AN": "et de l'intégrer dans une application",
+        "APPLICATION": ".",
+        "THIS_PROJECT_IS_BUILT_WITH_THE_IDEA": "Ce projet est construit avec l'idée d'offrir un kit de démarrage pour les futurs projets Angular.",
+        "THE_GOAL_IS_NOT_JUST_TO_OFFER": "L'objectif n'est pas seulement de proposer une mise en page avec",
+        "AND": "et",
+        "BUT_TO_HAVE_A_GUIDE": "mais de bénéficier d'un guide composé des meilleures pratiques à suivre lors de la création d'une application Angular.",
+        "INSTALLATION": "INSTALLATION",
+        "HOW_TO_LAUNCH_THE_APPLICATION": "Comment lancer l'application ?",
+        "OPEN_A_CONSOLE_TERMINAL": "Ouvrez une fenêtre de console/terminal et accédez au répertoire de votre espace de travail. Vous devez vous trouver dans le même dossier que le fichier package.json pour exécuter les commandes.",
+        "ENTER_THE_FOLLOWING_COMMAND": "Entrez la commande suivante pour installer les bibliothèques dans le projet :",
+        "ONCE_THE_INSTALLATION_PROCESS": "Une fois le processus d'installation terminé, exécutez la commande suivante en restant dans le répertoire de votre espace de travail :",
+        "THE_W": "La commande",
+        "THE_WITH_QUOTE": "L'option",
+        "COMMAND_STARTS_THE_SERVE": "lance le serveur.",
+        "OPTION": "",
+        "OR_SIMPLY": "ou simplement",
+        "AUTOMATICALLY_OPENS_YOUR_BROWSER_ON": "ouvre automatiquement votre navigateur sur",
+        "TECHNOLOGY": "TECHNOLOGIE",
+        "WHAT_LIBRARIES_ARE_USED": "Quelles librairies sont utilisées ?",
+        "IT_IS_RECOMMENDED_THAT_YOU_REGULARLY_UPDATE": "Il est recommandé de mettre régulièrement à jour les paquets de votre projet. Maintenir votre application Angular à jour vous permettra de bénéficier de nouvelles fonctionnalités de pointe, ainsi que d'optimisations et de corrections de bugs.",
+        "THIS_PACKAGE_IS_ONLY_USED_TO_DISPLAY": "Ce paquet est uniquement utilisé pour afficher le code en surbrillance sur cette page.",
+        "API": "API",
+        "AN_API_TO_SEARCH_FOR_NEWS": "Une API pour rechercher des informations dans le monde entier ?",
+        "NEWS_API_IS_AN_API_FOR_SEARCHING": "News API est une API permettant de rechercher des actualités mondiales avec du code. Il est possible de trouver des articles et des titres d'actualité à partir de sources d'information et de blogs sur le web en utilisant cette API JSON.",
+        "LINK_TO_NEWS_API": "Lien vers l'API News API:",
+        "CREATE_AN_ACCOUNT_IN_ORDER": "Créez un compte afin de disposer d'une clé API. Le package développeur est totalement gratuit et permet 100 requêtes par jour. 😉",
+        "I_HAVE_DELIBERATELY_LEFT_MY_API_KEY": "J'ai délibérément laissé ma clé API afin que vous puissiez avoir un aperçu du projet. Si jamais les onglets Actualités récentes et Actualités technologiques n'affichent aucun résultat, cela signifie simplement que la limite de 100 requêtes par jour a été atteinte.",
+        "UNDER_NORMAL_CIRCUMSTANCES_IT_IS_RECOMMENDED_TO_STORE": "Dans des circonstances normales, il est recommandé de conserver vos clés dans un environnement sécurisé qui n'est pas accessible au public."
+    },
+    "HOME_PROJECT_STRUCTURE": {
+        "PROJECT_STRUCTURE": "STRUCTURE DU PROJET",
+        "WHAT_KIND_OF_ARCHITECTURE" : "Quel type d'architecture ?",
+        "A_GOOD_ARCHITECTURE_MAKE_IT_EASIER" : "Une bonne architecture facilite la maintenance, optimise la taille du paquet et facilite l'extension et le remaniement d'une application. À l'inverse, une mauvaise architecture peut entraîner de mauvaises dépendances et des bundles plus volumineux que nécessaire. Il existe de nombreux choix d'architecture pour une application et il n'y a pas de \"meilleur choix\". Cependant, il est possible de choisir une architecture en fonction du contexte, de la taille du projet, du temps que l'on a consacré au projet, de la maintenabilité et de l'évolutivité.",
+        "HERE_ARE_SOME_EXISTING" : "Voici quelques architectures existantes :",
+        "EVERYTHING_IN_ONE_MODULE" : "Tout dans un seul module",
+        "DIFFICULT_TO_MAINTAIN" : "Difficile à maintenir sur un projet de taille moyenne à grande mais facile à mettre en place ce qui permet de gagner beaucoup de temps sur un petit projet.",
+        "ONE_MODULE_PER_COMPONENENT" : "Un module par composant",
+        "EACH_COMPONENT_HAS_ITS_OWN_MODULE" : "Chaque composant possède son propre module et uniquement ses dépendances. Il s'agit d'une architecture souvent utilisée lors de la création d'une bibliothèque de composants.",
+        "ONE_MODULE_PER_FEATURE" : "Un module par fonctionnalité.",
+        "EACH_MODULE_HAS_ONLY_THE_COMPONENTS" : "Chaque module a uniquement les composants et les dépendances dont il a besoin. Cette architecture est probablement la plus connue dans le monde Angular.",
+        "NORMALLY_IF_IT_WAS_ONLY" : "Normalement, s'il ne s'agissait que de créer une petite application pour tester une API, j'aurais certainement utilisé l'architecture \"Tout dans un seul module\" puisque le projet est relativement petit et peu susceptible d'évoluer. Cependant, j'ai décidé de choisir l'architecture \"Un module par fonctionnalité\" car c'est probablement l'architecture qui sera utilisée dans la plupart des cas.",
+        "MOREOVER_AS_I_SAID" : "De plus, comme je l'ai dit au début, l'idée de ce projet est de fournir un kit de démarrage pour les futurs projets Angular. 😉",
+        "BUT_LATER" : "Mais plus tard, je prendrai le temps de partager un petit projet pour chaque architecture",
+        "BELOW_IS_THE_PROJECT" : "Voici la structure du projet avec quelques commentaires entre",
+        "BRACKETS" : "parenthèses",
+        "THE_API_FOLDER" : "Le dossier api est spécifique à ce projet car il est utilisé dans plusieurs modules. Généralement, vous trouverez un service pour les requêtes http dans chaque module de fonctionnalités. Nous pouvons également noter que lorsque vous générez du code Angular avec SwaggerHub, il y a également un dossier api composé de tous les services.",
+        "THE_ICONS_DISPLAYED_IN_THE_TREE" : "Les icônes affichées dans l'arborescence correspondent aux icônes",
+        "ICONS_THAT_ARE_USED_IN" : "qui sont utilisées dans",
+        "COMMENT_API_FOLDER": "Gestion de l'API News qui est utilisée dans plusieurs modules de fonctionnalités",
+        "COMMENT_CONFIGURATION_FILE": "Configuration pour les requêtes HTTP",
+        "COMMENT_CORE_FOLDER": "Le noyau de l'application. Habituellement, ce dossier contient les logs, l'authentification et les guards",
+        "COMMENT_CONFIG_FOLDER": "Contient un module pour interagir avec l'AppConfig",
+        "COMMENT_ICONS_FOLDER": "Contient un module pour enregistrer les icônes et les utiliser avec le composant <mat-icon>",
+        "COMMENT_LAYOUT_FOLDER": "Layout de l'application, sidenav, toolbar, etc.",
+        "COMMENT_COMMON_FOLDER": "Contient tous les composants qui sont partagés dans le layout",
+        "COMMENT_MODULES_FOLDER": "Tous les modules de fonctionnalités de l'application",
+        "COMMENT_SHARED_FOLDER": "Contient tout ce qui est réutilisable, comme les composants, les directives et les tuyaux",
+        "COMMENT_APP_CONFIG_FILE": "Configuration par défaut pour toute l'application",
+        "COMMENT_I18N_FOLDER": "Contient toutes les traductions pour chaque langue",
+        "COMMENT_PACKAGE_FILE": "Contient toutes les librairies utilisées dans le projet",
+        "COMMENT_TAILWIND_CONFIG_FILE": "Ce fichier est utilisé pour configurer les classes générées par Tailwind"
+    },
+    "HOME_TAILWIND_CSS": {
+        "TAILWIND_CSS": "TAILWIND CSS",
+        "A_SET_OF_CLASSES": "Un ensemble de classes déjà disponibles ?",
+        "FOR_THOSE_UNFAMILIAR": "Pour ceux qui ne sont pas familiers avec Tailwind CSS, il s'agit d'un cadre CSS de bas niveau hautement personnalisable avec des classes d'aide pour presque toutes les règles CSS. Fondamentalement, un projet Angular est composé d'un ensemble de modules contenant des composants. Chaque composant possède un fichier TypeScript (.ts), un fichier HTML (.html) et un fichier CSS, SCSS ou SASS (.css, .scss, .sass) en fonction du choix de conception. Avec Tailwind, vous pouvez économiser beaucoup d'efforts en n'ayant pas à créer vos propres classes CSS puisque elles sont déjà présentes dans la plupart des cas directement dans Tailwind.",
+        "FOR_THOS_WONDERING": "Pour ceux qui se demandent quelle sera la taille finale du fichier CSS après la compilation du projet, ne vous inquiétez pas 😊",
+        "YOU_CAN_SET_UP_A_PURGE": "Vous pouvez configurer un système de purge avec Tailwind pour supprimer toutes les classes CSS qui ne sont pas utilisées dans le projet pendant la construction, ce qui réduira considérablement la taille finale du fichier CSS."
+    },
+    "HOME_ANGULAR_MATERIAL": {
+        "ANGULAR_MATERIAL": "ANGULAR MATERIAL",
+        "A_SET_OF_COMPONENTS": "Un ensemble de composants Angular déjà disponibles ?",
+        "ANGULAR_MATERIAL_IS_A_LIBRARY": "Angular Material est une bibliothèque de composants d'interface utilisateur basée sur Material Design que les développeurs peuvent utiliser dans leurs projets. Angular Material propose des composants réutilisables et déjà testés (boutons, cartes, dropdowns et bien d'autres...) ce qui constitue un gain de temps considérable lors de la conception d'une interface utilisateur. (Plutôt cool n'est-ce pas ? 😊)",
+        "THE_FINAL_WORK": "Le travail final consiste à fusionner les fonctionnalités de Tailwind avec celles d'Angular Material. Si vous êtes intéressé, vous pouvez trouver cela dans les dossiers shared/material et shared/tailwind. Pour résumer, l'idée est de créer un thème Angular Material en utilisant les classes CSS et les couleurs de Tailwind."
+    },
+    "TOP_NEWS": {
+        "THIS_PAGE_PROVIDES": "Cette page fournit des informations en direct sur l'actualité des États-Unis."
+    },
+    "TECH_NEWS": {
+        "THIS_PAGE_PROVIDES": "Cette page fournit des informations en direct sur l'actualité technologique des États-Unis."
+    },
+    "SIDENAV": {
+        "HOME": "Accueil",
+        "TOP_NEWS": "Actualités récentes",
+        "TECHNOLOGY_NEWS": "Actualités technologiques"
+    },
+    "USER_PROFILE": {
+        "DARK_MODE": "Thème sombre"
+    },
+    "ALERT": {
+        "INFO": "Information",
+        "WARNING": "Avertissement"
+    }
+}

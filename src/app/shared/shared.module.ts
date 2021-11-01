@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UtilsModule } from './services/utils';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -10,13 +11,14 @@ import { UtilsModule } from './services/utils';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        UtilsModule,
+        UtilsModule
     ],
     exports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         UtilsModule,
+        TranslateModule
     ]
 })
 export class SharedModule

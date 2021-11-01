@@ -12,30 +12,30 @@ export const PROJECT_TREE_DATA: ProjectTreeNode[] = [
                     {
                         name: 'api',
                         icon: 'folder',
-                        comment: 'Management of the News API which is used in several feature modules',
+                        comment: 'HOME_PROJECT_STRUCTURE.COMMENT_API_FOLDER',
                         children: [
                             { name: 'models', icon: 'folder' },
                             { name: 'services', icon: 'folder' },
                             { name: 'api.module.ts', icon: 'typescript' },
-                            { name: 'configuration.ts', icon: 'typescript', comment: 'Configuration for HTTP requests' }
+                            { name: 'configuration.ts', icon: 'typescript', comment: 'HOME_PROJECT_STRUCTURE.COMMENT_CONFIGURATION_FILE' }
                         ]
                     },
                     {
                         name: 'core',
                         icon: 'folder',
-                        comment: 'The core of the application. Usually this folder contains logs, authentication and guards',
+                        comment: 'HOME_PROJECT_STRUCTURE.COMMENT_CORE_FOLDER',
                         children: [
-                            { name: 'config', icon: 'folder', comment: 'Contains a module to interact with the AppConfig' },
-                            { name: 'icons', icon: 'folder', comment: 'Contains a module to register icons and use them with the <mat-icon> component' },
+                            { name: 'config', icon: 'folder', comment: 'HOME_PROJECT_STRUCTURE.COMMENT_CONFIG_FOLDER' },
+                            { name: 'icons', icon: 'folder', comment: 'HOME_PROJECT_STRUCTURE.COMMENT_ICONS_FOLDER' },
                             { name: 'core.module.ts', icon: 'typescript' },
                         ]
                     },
                     {
                         name: 'layout',
                         icon: 'folder',
-                        comment: 'Application layout, sidenav, toolbar et so on',
+                        comment: 'HOME_PROJECT_STRUCTURE.COMMENT_LAYOUT_FOLDER',
                         children: [
-                            { name: 'common', icon: 'folder', comment: 'Contains all components that are shared in the layout' },
+                            { name: 'common', icon: 'folder', comment: 'HOME_PROJECT_STRUCTURE.COMMENT_COMMON_FOLDER' },
                             { name: 'sidenav', icon: 'folder' },
                             { name: 'toolbar', icon: 'folder' },
                             { name: 'layout.component.html', icon: 'html' },
@@ -46,7 +46,7 @@ export const PROJECT_TREE_DATA: ProjectTreeNode[] = [
                     {
                         name: 'modules',
                         icon: 'folder',
-                        comment: 'All the feature modules of the application',
+                        comment: 'HOME_PROJECT_STRUCTURE.COMMENT_MODULES_FOLDER',
                         children: [
                             { name: 'home', icon: 'folder' },
                             { name: 'top-news', icon: 'folder' },
@@ -56,7 +56,7 @@ export const PROJECT_TREE_DATA: ProjectTreeNode[] = [
                     {
                         name: 'shared',
                         icon: 'folder',
-                        comment: 'Contains everything that is reusable, such as components, directives and pipes',
+                        comment: 'HOME_PROJECT_STRUCTURE.COMMENT_SHARED_FOLDER',
                         children: [
                             { name: 'components', icon: 'folder' },
                             { name: 'material', icon: 'folder' },
@@ -68,7 +68,7 @@ export const PROJECT_TREE_DATA: ProjectTreeNode[] = [
                     { name: 'app.component.scss', icon: 'sass' },
                     { name: 'app.component.spec.ts', icon: 'typescript' },
                     { name: 'app.component.ts', icon: 'typescript' },
-                    { name: 'app.config.ts', icon: 'typescript', comment: 'Default configuration for all the application' },
+                    { name: 'app.config.ts', icon: 'typescript', comment: 'HOME_PROJECT_STRUCTURE.COMMENT_APP_CONFIG_FILE' },
                     { name: 'app.module.ts', icon: 'typescript' },
                     { name: 'app.routing.ts', icon: 'typescript' },
                 ]
@@ -77,6 +77,11 @@ export const PROJECT_TREE_DATA: ProjectTreeNode[] = [
                 name: 'assets',
                 icon: 'folder',
                 children: [
+                    {
+                        name: 'i18n',
+                        icon: 'folder',
+                        comment: 'HOME_PROJECT_STRUCTURE.COMMENT_I18N_FOLDER'
+                    },
                     {
                         name: 'images',
                         icon: 'folder'
@@ -106,12 +111,12 @@ export const PROJECT_TREE_DATA: ProjectTreeNode[] = [
             {
                 name: 'package.json',
                 icon: 'json',
-                comment: 'Contains all the libraries that used in the project'
+                comment: 'HOME_PROJECT_STRUCTURE.COMMENT_PACKAGE_FILE'
             },
             {
                 name: 'tailwind.config.json',
                 icon: 'json',
-                comment: 'This file is used to configure the generated classes by Tailwind'
+                comment: 'HOME_PROJECT_STRUCTURE.COMMENT_TAILWIND_CONFIG_FILE'
             }
         ]
     }
