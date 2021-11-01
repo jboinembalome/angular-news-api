@@ -1,0 +1,102 @@
+{
+    "HOME": {
+        "WELCOME_TO_YOU": "Welcome to you!",
+        "THANK_YOU_FOR_DOWNLOADING": "Thank you for downloading this project 👍",
+        "WILL_FIND_A_SMALL_DOCUMATION": "On this page you will find a small documentation about this project.",
+        "INTRODUCTION": "INTRODUCTION",
+        "WHY_DID_I_CREATE_THIS_PROJECT": "Why did I create this project?",
+        "THIS_PROJECT_AIMS_TO_DISCOVER_THE": "This project aims to discover the",
+        "AND_INTEGRATE_IT_INTO_AN": "and integrate it into an",
+        "APPLICATION": "application.",
+        "THIS_PROJECT_IS_BUILT_WITH_THE_IDEA": "This project is built with the idea of offering a starter kit for future Angular projects.",
+        "THE_GOAL_IS_NOT_JUST_TO_OFFER": "The goal is not just to offer a layout with",
+        "AND": "and",
+        "BUT_TO_HAVE_A_GUIDE": "but to have a guide composed of best practices to follow when creating an Angular application.",
+        "INSTALLATION": "INSTALLATION",
+        "HOW_TO_LAUNCH_THE_APPLICATION": "How to launch the application?",
+        "OPEN_A_CONSOLE_TERMINAL": "Open a console/terminal window and navigate to your workspace directory. You must be in the same folder as the package.json file to run the commands.",
+        "ENTER_THE_FOLLOWING_COMMAND": "Enter the following command to install the libraries in the project:",
+        "ONCE_THE_INSTALLATION_PROCESS": "Once the installation process is complete, run the following command while remaining in your workspace directory:",
+        "THE_W": "The",
+        "THE_WITH_QUOTE": "The",
+        "COMMAND_STARTS_THE_SERVE": "command starts the server.",
+        "OPTION": "option",
+        "OR_SIMPLY": "or simply",
+        "AUTOMATICALLY_OPENS_YOUR_BROWSER_ON": "automatically opens your browser on",
+        "TECHNOLOGY": "TECHNOLOGY",
+        "WHAT_LIBRARIES_ARE_USED": "What libraries are used?",
+        "IT_IS_RECOMMENDED_THAT_YOU_REGULARLY_UPDATE": "It is recommended that you regularly update your project packages. Keeping your Angular application up to date will allow you to take advantage of new cutting-edge features, as well as optimizations and bug fixes.",
+        "THIS_PACKAGE_IS_ONLY_USED_TO_DISPLAY": "This package is only used to display highlighted code on this page",
+        "API": "API",
+        "AN_API_TO_SEARCH_FOR_NEWS": "An API to search for news around the world?",
+        "NEWS_API_IS_AN_API_FOR_SEARCHING": "News API is an API for searching world news with code. It is possible to find news articles and headlines from news sources and blogs on the web using this JSON API.",
+        "LINK_TO_NEWS_API": "Link to News API:",
+        "CREATE_AN_ACCOUNT_IN_ORDER": "Create an account in order to have an API key. The developer package is totally free and allows 100 requests per day. 😉",
+        "I_HAVE_DELIBERATELY_LEFT_MY_API_KEY": "I have deliberately left my API key so that you can have an overview of the project. If ever the Top News and Technology News tabs don't show any results, it simply means that the 100 requests per day limit has been reached.",
+        "UNDER_NORMAL_CIRCUMSTANCES_IT_IS_RECOMMENDED_TO_STORE": "Under normal circumstances it is recommended to store your keys in a secure environment that is not accessible to the public."
+    },
+    "HOME_PROJECT_STRUCTURE": {
+        "PROJECT_STRUCTURE": "PROJECT STRUCTURE",
+        "WHAT_KIND_OF_ARCHITECTURE" : "What kind of architecture?",
+        "A_GOOD_ARCHITECTURE_MAKE_IT_EASIER" : "A good architecture makes it easier to maintain, optimise the size of the bundle and facilitate the extension and refactoring of an application. Conversely, a bad architecture can lead to bad dependencies and larger than necessary bundles. There are many architectural choices for an application and there is no \"best choice\". However, it is possible to choose an architecture depending on the context, the size of the project, the time we have dedicated to the project, the maintainability and the scalability.",
+        "HERE_ARE_SOME_EXISTING" : "Here are some existing architectures:",
+        "EVERYTHING_IN_ONE_MODULE" : "Everything in one module",
+        "DIFFICULT_TO_MAINTAIN" : "Difficult to maintain on a medium to large project but is easy to set up which allows to save a lot of time on a small project.",
+        "ONE_MODULE_PER_COMPONENENT" : "One module per component",
+        "EACH_COMPONENT_HAS_ITS_OWN_MODULE" : "Each component has its own module and only its dependencies. This is an architecture that is often used when creating a component library.",
+        "ONE_MODULE_PER_FEATURE" : "One module per feature",
+        "EACH_MODULE_HAS_ONLY_THE_COMPONENTS" : "Each module has only the components and dependencies it needs. This architecture is probably the most known in the Angular world.",
+        "NORMALLY_IF_IT_WAS_ONLY" : "Normally, if it was only a matter of creating a small application to test an API, I would certainly have used the \"Everything in one module\" architecture since the project is relatively small and not likely to evolve. However, I decided to choose the \"One module per feature\" architecture as this is probably the architecture that will be used in most cases.",
+        "MOREOVER_AS_I_SAID" : "Moreover, as I said at the beginning, the idea of this project is to provide a starter kit for future Angular projects. 😉",
+        "BUT_LATER" : "But later, I will take the time to share a small project for each architecture of course",
+        "BELOW_IS_THE_PROJECT" : "Below is the project structure with some comments in",
+        "BRACKETS" : "brackets",
+        "THE_API_FOLDER" : "The api folder is specific to this project as it is used in several modules. Generally you will find a service for http requests in each feature module. We can also note that when you generate Angular code with SwaggerHub, there is also an api folder composed of all the services.",
+        "THE_ICONS_DISPLAYED_IN_THE_TREE" : "The icons displayed in the tree correspond to the",
+        "ICONS_THAT_ARE_USED_IN" : "icons that are used in",
+        "COMMENT_API_FOLDER": "Management of the News API which is used in several feature modules",
+        "COMMENT_CONFIGURATION_FILE": "Configuration for HTTP requests",
+        "COMMENT_CORE_FOLDER": "The core of the application. Usually this folder contains logs, authentication and guards",
+        "COMMENT_CONFIG_FOLDER": "Contains a module to interact with the AppConfig",
+        "COMMENT_ICONS_FOLDER": "Contains a module to register icons and use them with the <mat-icon> component",
+        "COMMENT_LAYOUT_FOLDER": "Application layout, sidenav, toolbar et so on",
+        "COMMENT_COMMON_FOLDER": "Contains all components that are shared in the layout",
+        "COMMENT_MODULES_FOLDER": "All the feature modules of the application",
+        "COMMENT_SHARED_FOLDER": "Contains everything that is reusable, such as components, directives and pipes",
+        "COMMENT_APP_CONFIG_FILE": "Default configuration for all the application",
+        "COMMENT_I18N_FOLDER": "Contains all the translations for each language",
+        "COMMENT_PACKAGE_FILE": "Contains all the libraries that used in the project",
+        "COMMENT_TAILWIND_CONFIG_FILE": "This file is used to configure the generated classes by Tailwind"
+    },
+    "HOME_TAILWIND_CSS": {
+        "TAILWIND_CSS": "TAILWIND CSS",
+        "A_SET_OF_CLASSES": "A set of classes already available?",
+        "FOR_THOSE_UNFAMILIAR": "For those unfamiliar with Tailwind CSS, it is a highly customisable low-level CSS framework with helper classes for almost every CSS rule. Basically, an Angular project is composed of a set of modules containing components. Each component has a TypeScript file (.ts), an HTML file (.html) and a CSS, SCSS or SASS file (.css, .scss, .sass) depending on the design choice. With Tailwind, you can save a lot of effort by not having to create your own CSS classes as they are already present in most cases directly in Tailwind.",
+        "FOR_THOS_WONDERING": "For those wondering about the final size of the CSS file after the project has been compiled, don't worry 😊",
+        "YOU_CAN_SET_UP_A_PURGE": "You can set up a purge system with Tailwind to remove all CSS classes that are not used in the project during the build which will greatly reduce the final size of the CSS file."
+    },
+    "HOME_ANGULAR_MATERIAL": {
+        "ANGULAR_MATERIAL": "ANGULAR MATERIAL",
+        "A_SET_OF_COMPONENTS": "A set of Angular components already available?",
+        "ANGULAR_MATERIAL_IS_A_LIBRARY": "Angular Material is a library of UI components based on Material Design that developers can use in their projects. Angular Material offers reusable and already tested components (buttons, cards, dropdowns and many more...) which is a great time saver when designing a user interface. (Pretty cool isn't it? 😊)",
+        "THE_FINAL_WORK": "The final work is to merge the functionalities of Tailwind with the functionality of Angular Material. If you are interested, you can find this in the shared/material and shared/tailwind folders. To summarize, the idea is to create a Material Angular theme using the CSS classes and colours of Tailwind."
+    },
+    "TOP_NEWS": {
+        "THIS_PAGE_PROVIDES": "This page provides live top and breaking headlines for USA."
+    },
+    "TECH_NEWS": {
+        "THIS_PAGE_PROVIDES": "This page provides live information on USA technology news."
+    },
+    "SIDENAV": {
+        "HOME": "Home",
+        "TOP_NEWS": "Top News",
+        "TECHNOLOGY_NEWS": "Technology News"
+    },
+    "USER_PROFILE": {
+        "DARK_MODE": "Dark mode"
+    },
+    "ALERT": {
+        "INFO": "Information",
+        "WARNING": "Warning"
+    }
+}
