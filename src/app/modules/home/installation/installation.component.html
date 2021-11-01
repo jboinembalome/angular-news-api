@@ -3,31 +3,28 @@
   <div class="max-w-prose mx-auto">
     <h1>
       <span
-        class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">Installation</span>
-      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">How to launch
-        the application?</span>
+        class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">{{ 'HOME.INSTALLATION' | translate }}</span>
+      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">{{ 'HOME.HOW_TO_LAUNCH_THE_APPLICATION' | translate }}</span>
     </h1>
   </div>
   <div class="mt-6 mx-auto">
-    <p>Open a console/terminal window and navigate to your workspace directory. You must be in the same folder as the
-      package.json file to run the commands.</p>
+    <p>{{ 'HOME.OPEN_A_CONSOLE_TERMINAL' | translate }}</p>
   </div>
   <div class="mt-6 mx-auto">
-    <p>Enter the following command to install the libraries in the project:</p>
+    <p>{{ 'HOME.ENTER_THE_FOLLOWING_COMMAND' | translate }}</p>
   </div>
   <div class="mt-2 mx-auto">
     <pre><code class="rounded-lg" [highlight]="codeNpmInstall"></code></pre>
   </div>
   <div class="mt-6 mx-auto">
-    <p>Once the installation process is complete, run the following command while remaining in your workspace directory:
-    </p>
+    <p>{{ 'HOME.ONCE_THE_INSTALLATION_PROCESS' | translate }}</p>
   </div>
   <div class="mt-2 mx-auto">
     <pre><code class="rounded-lg" [highlight]="codeNgServe"></code></pre>
   </div>
   <div class="mt-2 mx-auto">
-    <p>The <strong>ng serve</strong> command starts the server.</p>
-    <p>The <strong>-open</strong> option (or simply <strong>-o</strong>) automatically opens your browser on
+    <p>{{ 'HOME.THE_W' | translate }} <strong>ng serve</strong> {{ 'HOME.COMMAND_STARTS_THE_SERVE' | translate }}</p>
+    <p>{{ 'HOME.THE_WITH_QUOTE' | translate }} <strong>-open</strong> {{ 'HOME.OPTION' | translate }} ({{ 'HOME.OR_SIMPLY' | translate }} <strong>-o</strong>) {{ 'HOME.AUTOMATICALLY_OPENS_YOUR_BROWSER_ON' | translate }}
       http://localhost:4200/.</p>
   </div>
 </div>
