@@ -1,0 +1,55 @@
+<div class="tw-alert-container" *ngIf="!dismissible || dismissible && !dismissed">
+
+    <!-- Border -->
+    <div class="tw-alert-border" *ngIf="appearance === 'border'"></div>
+
+    <!-- Icon -->
+    <div class="tw-alert-icon" *ngIf="showIcon">
+
+        <!-- Custom icon -->
+        <div class="tw-alert-custom-icon">
+            <ng-content select="[twAlertIcon]"></ng-content>
+        </div>
+
+        <!-- Default icons -->
+        <div class="tw-alert-default-icon">
+
+            <mat-icon *ngIf="type === 'primary'" [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon *ngIf="type === 'accent'" [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon *ngIf="type === 'warn'" [svgIcon]="'heroicons_solid:x-circle'"></mat-icon>
+
+            <mat-icon *ngIf="type === 'basic'" [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon *ngIf="type === 'info'" [svgIcon]="'heroicons_solid:information-circle'"></mat-icon>
+
+            <mat-icon *ngIf="type === 'success'" [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+
+            <mat-icon *ngIf="type === 'warning'" [svgIcon]="'heroicons_solid:exclamation'"></mat-icon>
+
+            <mat-icon *ngIf="type === 'error'" [svgIcon]="'heroicons_solid:x-circle'"></mat-icon>
+
+        </div>
+
+    </div>
+
+    <!-- Content -->
+    <div class="tw-alert-content">
+
+        <div class="tw-alert-title">
+            <ng-content select="[twAlertTitle]"></ng-content>
+        </div>
+
+        <div class="tw-alert-message">
+            <ng-content></ng-content>
+        </div>
+
+    </div>
+
+    <!-- Dismiss button -->
+    <button class="tw-alert-dismiss-button" mat-icon-button (click)="dismiss()">
+        <mat-icon [svgIcon]="'heroicons_solid:x'"></mat-icon>
+    </button>
+
+</div>
