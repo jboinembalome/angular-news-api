@@ -1,0 +1,119 @@
+<!-- Project Structure -->
+<div class="relative mt-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-prose mx-auto">
+    <h1>
+      <span class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">Project
+        structure</span>
+      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">What kind of
+        architecture?</span>
+    </h1>
+  </div>
+  <div class="mt-6 mx-auto">
+    <p>A good architecture makes it easier to maintain, optimise the size of the bundle and facilitate the extension and
+      refactoring of an application. Conversely, a bad architecture can lead to bad dependencies and larger than
+      necessary bundles. There are many architectural choices for an application and there is no "best choice". However,
+      it is possible to choose an architecture depending on the context, the size of the project, the time we have
+      dedicated to the project, the maintainability and the scalability.
+    </p>
+  </div>
+  <div class="mt-6 mx-auto">
+    <p>Here are some existing architectures:</p>
+  </div>
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="pt-6">
+      <div class="flow-root bg-primary-100 rounded-lg px-6 pb-8">
+        <div class="mt-6">
+          <h3 class="mt-8 text-lg font-medium text-nightBlue-500 tracking-tight">Everything in one module</h3>
+          <p class="mt-5 text-base text-gray-500">
+            Difficult to maintain on a medium to large project but is easy to set up which allows to save a lot of time
+            on a small project.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-6">
+      <div class="flow-root bg-primary-100 rounded-lg px-6 pb-8">
+        <div class="mt-6">
+          <h3 class="mt-8 text-lg font-medium text-nightBlue-500 tracking-tight">One module per component</h3>
+          <p class="mt-5 text-base text-gray-500">
+            Each component has its own module and only its dependencies. This is an architecture that is often used when
+            creating a component library.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-6">
+      <div class="flow-root bg-primary-100 rounded-lg px-6 pb-8">
+        <div class="mt-6">
+          <h3 class="mt-8 text-lg font-medium text-nightBlue-500 tracking-tight">One module per feature</h3>
+          <p class="mt-5 text-base text-gray-500">
+            Each module has only the components and dependencies it needs. This architecture is probably the most known
+            in the Angular world.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 mx-auto">
+    <p>Normally, if it was only a matter of creating a small application to test an API, I would certainly have used the
+      "Everything in one module" architecture since the project is relatively small and not likely to evolve.
+      However, I decided to choose the "One module per feature" architecture as this is probably the architecture that
+      will be used in most cases.
+    </p>
+    <p>Moreover, as I said at the beginning, the idea of this project is to provide a starter kit
+      for future Angular projects. 😉
+    </p>
+  </div>
+  <div class="mt-2 mx-auto">
+    <p>(But later, I will take the time to share a small project for each architecture of course)</p>
+  </div>
+  <div class="mt-6 mx-auto">
+    <p>Below is the project structure with some comments in <span class="text-green-500">brackets</span>:</p>
+  </div>
+  <div class="mt-2 mx-auto">
+    <div class="bg-black p-6 pl-3 rounded shadow">
+      <mat-tree class="bg-black" [dataSource]="dataSource" [treeControl]="treeControl">
+        <!-- This is the tree node template for leaf nodes -->
+        <mat-tree-node class="text-gray-100" *matTreeNodeDef="let node" matTreeNodePadding>
+          <!-- use a disabled button to provide padding for tree leaf -->
+          <button mat-button disabled class="whitespace-normal text-left text-gray-100">
+            <mat-icon class="mr-2" *ngIf="node.icon" [svgIcon]="'seti:' + node.icon"></mat-icon>
+            <span>{{node.name}}</span>
+            <span *ngIf="node.comment" class="ml-2 text-green-500">{{" (" + node.comment + ")"}}</span>
+          </button>
+        </mat-tree-node>
+        <!-- This is the tree node template for expandable nodes -->
+        <mat-tree-node class="text-gray-100" *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+          <button mat-button matTreeNodeToggle class="whitespace-normal text-left text-gray-100"
+            [attr.aria-label]="'Toggle ' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+            <mat-icon class="mr-2" *ngIf="node.icon" [svgIcon]="'seti:' + node.icon"></mat-icon>
+            <span>{{node.name}}</span>
+            <span *ngIf="node.comment" class="ml-2 text-green-500">{{" (" + node.comment + ")"}}</span>
+          </button>
+        </mat-tree-node>
+      </mat-tree>
+    </div>
+  </div>
+  <div class="mt-6 mx-auto">
+    <tw-alert [type]="'info'" [appearance]="'border'">
+      <span twAlertTitle>Info alert</span>
+      The api folder is specific to this project as it is used in several modules.
+      Generally you will find a service for http requests in each feature module. We can also note that when you
+      generate Angular code with SwaggerHub, there is also an api folder composed of all the services.
+    </tw-alert>
+  </div>
+  <div class="mt-2 mx-auto">
+    <tw-alert [type]="'info'" [appearance]="'border'">
+      <span twAlertTitle>Info alert</span>
+      The icons displayed in the tree correspond to the <a class="text-primary-500 underline"
+        href="https://github.com/jesseweed/seti-ui" rel="noreferrer" target="_blank">Seti UI</a> icons that are used in
+      <a class="text-primary-500 underline" href="https://code.visualstudio.com/" rel="noreferrer" target="_blank">Visual
+        Studio Code</a>.
+    </tw-alert>
+  </div>
+</div>
