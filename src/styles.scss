@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+$material-design-icons-font-directory-path: '~material-design-icons-iconfont/dist/fonts/';
+
+@import '~material-design-icons-iconfont/src/material-design-icons';
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import '~highlight.js/styles/github-dark.css';
+
+html, body { height: 100%; }
