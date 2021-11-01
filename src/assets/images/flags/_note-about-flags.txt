@@ -1,0 +1,5 @@
+### Source containing all flags ###
+https://github.com/Yummygum/flagpack-core
+
+### I use flags that are "m" size ###
+https://github.com/Yummygum/flagpack-core/tree/main/svg/m
