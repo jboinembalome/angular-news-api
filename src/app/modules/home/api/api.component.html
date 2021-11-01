@@ -2,25 +2,24 @@
 <div class="relative mt-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-prose mx-auto">
     <h1>
-      <span class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">API</span>
-      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">An API to search
-        for news around the world?</span>
+      <span class="block text-base text-center text-primary-500 font-semibold tracking-wide uppercase">{{ 'HOME.API' | translate}}</span>
+      <span class="mt-2 block text-2xl text-center text-nightBlue-500 dark:text-gray-100 leading-8 font-extrabold tracking-tight sm:text-2xl">{{ 'HOME.AN_API_TO_SEARCH_FOR_NEWS' | translate}}</span>
     </h1>
   </div>
   <div class="mt-6 mx-auto">
-    <p>Link to News API: <a class="text-primary-500 underline" href="https://newsapi.org/">https://newsapi.org/</a></p>
+    <p>{{ 'HOME.NEWS_API_IS_AN_API_FOR_SEARCHING' | translate}}</p>
   </div>
-  <div class="mt-2 mx-auto">
-    <p>Create an account in order to have an API key.
-      The developer package is totally free and allows 100 requests per day. 😉 <br>
-      I have deliberately left my API key so that you can have an overview of the project. If ever the Top News and
-      Technology News tabs don't show any results, it simply means that the 100 requests per day limit has been reached.
+  <div class="mt-6 mx-auto">
+    <p>{{ 'HOME.LINK_TO_NEWS_API' | translate}} <a class="text-primary-500 underline" href="https://newsapi.org/">https://newsapi.org/</a></p>
+  </div>
+  <div class="mt-6 mx-auto">
+    <p>{{ 'HOME.CREATE_AN_ACCOUNT_IN_ORDER' | translate}} <br>
+      {{ 'HOME.I_HAVE_DELIBERATELY_LEFT_MY_API_KEY' | translate}}
     </p>
     <div class="mt-6 mx-auto">
       <tw-alert [type]="'warning'" [appearance]="'border'">
-        <span twAlertTitle>Warning alert</span>
-        Under normal circumstances it is recommended to store your keys in a secure environment that is not
-        accessible to the public.
+        <span twAlertTitle>{{ 'ALERT.WARNING' | translate}}</span>
+        {{ 'HOME.UNDER_NORMAL_CIRCUMSTANCES_IT_IS_RECOMMENDED_TO_STORE' | translate}}
       </tw-alert>
     </div>
   </div>
