@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,13 +12,19 @@ import { appConfig } from './app.config';
 import { LayoutModule } from './layout/layout.module';
 import { ApiModule } from './api/api.module';
 import { CoreModule } from './core/core.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 const routerConfig: ExtraOptions = {
   preloadingStrategy       : PreloadAllModules,
   scrollPositionRestoration: 'enabled'
 };
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -42,6 +49,16 @@ const routerConfig: ExtraOptions = {
 
     // Highlight module to display code snippets
     //HighlightModule
+
+    // Translation module (by default use "en" language)
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     {
