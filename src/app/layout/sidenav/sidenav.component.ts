@@ -41,7 +41,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
     // Set the theme and scheme based on the configuration
     this._configService.config.pipe(
       takeUntil(this._unsubscribeAll),
-      map((config) => {
+      map((config: any) => {
         const options = {
           scheme: config.scheme,
           theme: config.theme
@@ -76,7 +76,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
-    this._unsubscribeAll.next();
+    this._unsubscribeAll.next(null);
     this._unsubscribeAll.complete();
   }
 
