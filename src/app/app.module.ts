@@ -15,9 +15,8 @@ import { CoreModule } from './core/core.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-
 const routerConfig: ExtraOptions = {
-  preloadingStrategy       : PreloadAllModules,
+  preloadingStrategy: PreloadAllModules,
   scrollPositionRestoration: 'enabled'
 };
 
@@ -54,9 +53,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
     })
   ],
