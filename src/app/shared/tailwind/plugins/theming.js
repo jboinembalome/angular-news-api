@@ -90,7 +90,7 @@ function generateThemesObject(themes)
 }
 
 // -----------------------------------------------------------------------------------------------------
-// @ tw TailwindCSS Main Plugin
+// @ TailwindCSS Main Plugin
 // -----------------------------------------------------------------------------------------------------
 const theming = plugin.withOptions((options) => ({
         addComponents,
@@ -101,7 +101,7 @@ const theming = plugin.withOptions((options) => ({
         // -----------------------------------------------------------------------------------------------------
         // @ Map variable colors
         // -----------------------------------------------------------------------------------------------------
-        const mapVariableColors = _.fromPairs(_.map(options.themes, (theme, themeName) => { return [
+        const mapVariableColors = _.fromPairs(_.map(options.themes, (theme, themeName) => [
             themeName === 'default' ? 'body, .theme-default' : `.theme-${e(themeName)}`,
             _.fromPairs(_.flatten(_.map(flattenColorPalette(_.fromPairs(_.flatten(_.map(normalizeTheme(theme), (palette, paletteName) => [
                     [
@@ -114,7 +114,7 @@ const theming = plugin.withOptions((options) => ({
                     ]
                 ])
             ))), (value, key) => [[`--tw-${e(key)}`, value], [`--tw-${e(key)}-rgb`, chroma(value).rgb().join(',')]])))
-        ]}));
+        ]));
 
         addComponents(mapVariableColors);
 
@@ -179,7 +179,7 @@ const theming = plugin.withOptions((options) => ({
                 extend: {
                     colors: generateVariableColors(options.themes.default)
                 },
-                tw  : {
+                tw: {
                     customProps: {
                         background: {
                             light: {
