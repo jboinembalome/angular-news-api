@@ -1,6 +1,6 @@
 // Types
 export type Scheme = 'dark' | 'light';
-export type Theme = 'default' | 'orangeSofa' | 'teal' | 'rose' | 'purple' | 'amber';
+export type Theme = 'theme-default' | 'theme-orangeSofa' | 'theme-teal' | 'theme-rose' | 'theme-purple' | 'theme-amber';
 
 /**
  * AppConfig interface. Update this interface to strictly type the configuration
@@ -17,5 +17,5 @@ export interface AppConfig {
  */
 export const appConfig: AppConfig = {
     scheme: 'light',
-    theme: 'orangeSofa'
+    theme: 'theme-orangeSofa'
 };

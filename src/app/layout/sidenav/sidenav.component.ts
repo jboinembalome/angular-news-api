@@ -20,7 +20,7 @@ const SMALL_WIDTH_BREAKPOINT = 720;
 export class SidenavComponent implements OnInit, OnDestroy {
 
   scheme: Scheme = 'light';
-  private theme: Theme = 'default';
+  private theme: Theme = 'theme-orangeSofa';
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   displayProgressBar = false;
@@ -115,6 +115,6 @@ export class SidenavComponent implements OnInit, OnDestroy {
     });
 
     // Add class name for the currently selected theme
-    this._document.body.classList.add(`theme-${this.theme}`);
+    this._document.body.classList.add(this.theme);
   }
 }
