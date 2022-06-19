@@ -1,6 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "schematicCollections": [
+        "@angular-eslint/schematics"
+    ]
+  },
   "newProjectRoot": "projects",
   "projects": {
     "angular-news": {
@@ -8,9 +13,6 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -31,9 +33,12 @@
               "src/assets"
             ],
             "styles": [
+              "src/app/shared/tailwind/styles/tailwind.scss",
               "src/app/shared/material/styles/themes.scss",
               "src/app/shared/material/styles/overrides/angular-material.scss",
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/tailwind.scss",
+              "src/styles/vendors.scss"
             ],
             "scripts": []
           },
@@ -105,9 +110,17 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+              "lintFilePatterns": [
+                  "src/**/*.ts",
+                  "src/**/*.html"
+              ]
+          }
         }
       }
     }
-  },
-  "defaultProject": "angular-news"
+  }
 }

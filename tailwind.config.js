@@ -24,8 +24,8 @@ const themes = {
       DEFAULT: colors.indigo[600]
     },
     accent: {
-      ...colors.blueGray,
-      DEFAULT: colors.blueGray[800]
+      ...colors.slate,
+      DEFAULT: colors.slate[800]
     },
     warn: {
       ...colors.red,
@@ -61,42 +61,16 @@ const themes = {
 };
 
 module.exports = {
-  experimental: {},
-  future: {},
   darkMode: 'class',
+  content: ['./src/**/*.{html,scss,ts}'],
   important: true,
-  purge: {
-    enabled: true,
-    content: ['./src/**/*.{html,scss,ts}'],
-    options: {
-      safelist: {
-        standard: ['dark'],
-        deep: [/^theme/, /^mat/]
-      }
-    }
-  },
   theme: {
-    cursor: {
-      auto: 'auto',
-      default: 'default',
-      pointer: 'pointer',
-      wait: 'wait',
-      text: 'text',
-      move: 'move',
-      'not-allowed': 'not-allowed',
-      crosshair: 'crosshair',
-      'zoom-in': 'zoom-in',
-      grab: 'grab'
-    },
-    extend: {
-
-    },
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
+      transparent: colors.transparent,
+      current: colors.current,
       black: colors.black,
       white: colors.white,
-      gray: colors.blueGray,
+      gray: colors.slate,
       teal: colors.teal,
       green: colors.green,
       amber: colors.amber,
@@ -109,21 +83,12 @@ module.exports = {
       red: colors.red,
       yellow: colors.yellow,
       blue: colors.blue,
-      blueGray: colors.blueGray,
       orangeSofa: customPalettes.orangeSofa,
       nightBlue : customPalettes.nightBlue
     }
   },
-  variants: {
-    extend: {
-      backgroundColor: ['disabled'],
-      textColor: ['disabled'],
-      opacity: ['disabled'],
-    }
-  },
   plugins: [
     // Tailwind plugins
-    require(path.resolve(__dirname, ('src/app/shared/tailwind/plugins/extract-config'))),
     require(path.resolve(__dirname, ('src/app/shared/tailwind/plugins/utilities'))),
     require(path.resolve(__dirname, ('src/app/shared/tailwind/plugins/icon-size'))),
     require(path.resolve(__dirname, ('src/app/shared/tailwind/plugins/theming')))({themes}),
