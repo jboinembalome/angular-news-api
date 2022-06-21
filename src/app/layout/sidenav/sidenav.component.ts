@@ -85,7 +85,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
         this.navigationObserver(event);
 
         if (this.isScreenSmall)
-          this.sidenav.close();
+          {this.sidenav.close();}
       });
 
 
@@ -99,10 +99,10 @@ export class SidenavComponent implements OnInit, OnDestroy {
 
   private navigationObserver(event: NavigationEvent): void {
     if (event instanceof NavigationStart)
-      this.displayProgressBar = true;
+      {this.displayProgressBar = true;}
 
     if (event instanceof NavigationEnd)
-      this.displayProgressBar = false;
+      {this.displayProgressBar = false;}
   }
 
   toggleScheme(newScheme: Scheme) {
@@ -125,7 +125,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
     // Find the class name for the previously selected theme and remove it
     this._document.body.classList.forEach((className: string) => {
       if (className.startsWith('theme-'))
-        this._document.body.classList.remove(className, className.split('-')[1]);
+        {this._document.body.classList.remove(className, className.split('-')[1]);}
     });
 
     // Add class name for the currently selected theme

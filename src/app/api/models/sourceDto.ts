@@ -1,4 +1,4 @@
-export interface SourceDto { 
+export interface SourceDto {
     id?: number;
     name?: string;
 }

@@ -10,15 +10,13 @@ import { PROJECT_TREE_DATA } from './project-structure.constant';
   templateUrl: './project-structure.component.html'
 })
 export class ProjectStructureComponent implements OnInit {
-  private _transformer = (node: ProjectTreeNode, level: number): FlatProjectTreeNode => {
-    return {
+  private _transformer = (node: ProjectTreeNode, level: number): FlatProjectTreeNode => ({
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
       level: level,
       icon: node.icon,
       comment: node.comment
-    };
-  }
+    });
 
   treeControl = new FlatTreeControl<FlatProjectTreeNode>(
     node => node.level, node => node.expandable);

@@ -1,4 +1,4 @@
-import { ProjectTreeNode } from "./models/project-tree.model";
+import { ProjectTreeNode } from './models/project-tree.model';
 
 export const PROJECT_TREE_DATA: ProjectTreeNode[] = [
     {

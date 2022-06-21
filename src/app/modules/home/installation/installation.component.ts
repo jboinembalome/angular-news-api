@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './installation.component.html'
 })
 export class InstallationComponent {
-  codeNpmInstall = "npm install";
-  codeNgServe = "ng serve --open";
+  codeNpmInstall = 'npm install';
+  codeNgServe = 'ng serve --open';
 
   constructor() {}
 }

@@ -15,5 +15,5 @@ export class TopNewsComponent implements OnInit {
   ngOnInit(): void {
     this.topArticles = this._newsService.topHeadlines();
   }
-  
+
 }

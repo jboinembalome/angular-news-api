@@ -12,7 +12,7 @@ export class ArticleCardComponent {
     @Input() description?: string = '';
     @Input() author?: string = '';
     @Input() publishedAt?: Date | null = null;
-    
+
     constructor() {
     }
 }

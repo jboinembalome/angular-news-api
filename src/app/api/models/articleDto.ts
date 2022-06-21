@@ -1,6 +1,6 @@
-import { SourceDto } from "./sourceDto";
+import { SourceDto } from './sourceDto';
 
-export interface ArticleDto { 
+export interface ArticleDto {
     source?: SourceDto;
     author?: string;
     title?: string;

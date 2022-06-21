@@ -19,7 +19,7 @@ export class ToolbarComponent {
     private _router: Router) {
     }
 
-  openSnackBar(message: string, action: string) : MatSnackBarRef<SimpleSnackBar> {
+  openSnackBar(message: string, action: string): MatSnackBarRef<SimpleSnackBar> {
     return this._snackBar.open(message, action, {
       duration: 5000,
     });

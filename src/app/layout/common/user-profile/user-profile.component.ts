@@ -10,8 +10,8 @@ export class UserProfileComponent implements OnInit {
   @Input() scheme: Scheme = 'light';
   @Output() toggleScheme = new EventEmitter<Scheme>();
   @Output() toggleDir = new EventEmitter<void>();
-  
-  constructor() { 
+
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -22,7 +22,7 @@ export class UserProfileComponent implements OnInit {
     this.checkedDarkMode = !this.checkedDarkMode;
 
     const newScheme: Scheme = this.checkedDarkMode ? 'dark': 'light';
-    
+
     this.toggleScheme.emit(newScheme);
   }
 }
