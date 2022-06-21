@@ -3,25 +3,24 @@ import { Scheme } from 'src/app/app.config';
 
 @Component({
   selector: 'user-profile',
-  templateUrl: './user-profile.component.html'
+  templateUrl: './user-profile.component.html',
 })
 export class UserProfileComponent implements OnInit {
-  checkedDarkMode: boolean = false;
   @Input() scheme: Scheme = 'light';
   @Output() toggleScheme = new EventEmitter<Scheme>();
   @Output() toggleDir = new EventEmitter<void>();
+  checkedDarkMode: boolean = false;
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    this.checkedDarkMode = this.scheme == 'light' ? false : true;
+    this.checkedDarkMode = this.scheme === 'light' ? false : true;
   }
 
-  updateScheme() {
+  updateScheme(): void {
     this.checkedDarkMode = !this.checkedDarkMode;
 
-    const newScheme: Scheme = this.checkedDarkMode ? 'dark': 'light';
+    const newScheme: Scheme = this.checkedDarkMode ? 'dark' : 'light';
 
     this.toggleScheme.emit(newScheme);
   }

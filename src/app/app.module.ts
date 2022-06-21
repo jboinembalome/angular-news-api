@@ -20,10 +20,7 @@ const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled'
 };
 
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
+export const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new TranslateHttpLoader(http);
 
 @NgModule({
   declarations: [
@@ -54,7 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: httpLoaderFactory,
         deps: [HttpClient]
       }
     })
@@ -63,7 +60,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
-        fullLibraryLoader: () => import('highlight.js'),
+        fullLibraryLoader: (): Promise<typeof import('highlight.js')> => import('highlight.js'),
       }
     }
   ],

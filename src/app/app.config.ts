@@ -24,6 +24,7 @@ export const appConfig: AppConfig = {
         'md': '768px',
         'lg': '1024px',
         'xl': '1280px',
+        // eslint-disable-next-line @typescript-eslint/naming-convention
         '2xl': '1536px'
     },
     theme: 'theme-orangeSofa'

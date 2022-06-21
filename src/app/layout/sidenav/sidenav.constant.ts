@@ -1,10 +1,7 @@
 import { Navigation } from './models/navigation.model';
 
-const navigationPaths: Navigation[] =
-[
-    { Name: 'SIDENAV.HOME', Href: '/home', Icon: 'home' },
-    { Name: 'SIDENAV.TOP_NEWS', Href: '/top-news', Icon: 'article' },
-    { Name: 'SIDENAV.TECHNOLOGY_NEWS', Href: '/tech-news', Icon: 'desktop_mac' },
+export const navigationPaths: Navigation[] = [
+  { name: 'SIDENAV.HOME', href: '/home', icon: 'home' },
+  { name: 'SIDENAV.TOP_NEWS', href: '/top-news', icon: 'article' },
+  { name: 'SIDENAV.TECHNOLOGY_NEWS', href: '/tech-news', icon: 'desktop_mac' },
 ];
-
-export const NavigationPaths: Navigation[] = navigationPaths;

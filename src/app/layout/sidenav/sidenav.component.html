@@ -11,9 +11,9 @@
     </div>
     <mat-nav-list class="mt-3 px-2 space-y-1">
       <a matLine *ngFor="let path of navigationPaths" 
-        [routerLink]="path.Href" routerLinkActive="bg-primary-800"
+        [routerLink]="path.href" routerLinkActive="bg-primary-800"
         class="text-primary-100 hover:bg-primary-600 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-        <mat-icon class=" mr-3 flex-shrink-0 h-6 w-6 text-primary-300">{{path.Icon}}</mat-icon> {{path.Name | translate}}
+        <mat-icon class=" mr-3 flex-shrink-0 h-6 w-6 text-primary-300">{{path.icon}}</mat-icon> {{path.name | translate}}
       </a>
     </mat-nav-list>
   </mat-sidenav>

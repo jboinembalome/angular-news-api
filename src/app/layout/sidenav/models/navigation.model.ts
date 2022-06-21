@@ -1,5 +1,5 @@
 export interface Navigation {
-    readonly Name: string;
-    readonly Href: string;
-    readonly Icon: string;
+    readonly name: string;
+    readonly href: string;
+    readonly icon: string;
 }

@@ -1,8 +1,13 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Event as NavigationEvent, NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { NavigationPaths } from './sidenav.constant';
+import {
+  Event as NavigationEvent,
+  NavigationEnd,
+  NavigationStart,
+  Router,
+} from '@angular/router';
+import { navigationPaths } from './sidenav.constant';
 import { Navigation } from './models/navigation.model';
 import { ConfigService } from 'src/app/core/config';
 import { combineLatest, Subject } from 'rxjs';
@@ -15,66 +20,67 @@ const SMALL_WIDTH_BREAKPOINT = 720;
 @Component({
   selector: 'sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit, OnDestroy {
-
+  @ViewChild(MatSidenav) sidenav!: MatSidenav;
   scheme: Scheme = 'light';
-  private theme: Theme = 'theme-orangeSofa';
-  private _unsubscribeAll: Subject<any> = new Subject<any>();
-
   displayProgressBar = false;
   isScreenSmall: boolean = false;
-  navigationPaths: Navigation[] = NavigationPaths;
+  navigationPaths: Navigation[] = navigationPaths;
   isDarkTheme: boolean = false;
-
-  @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  private theme: Theme = 'theme-orangeSofa';
+  private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   constructor(
     @Inject(DOCUMENT) private _document: any,
     private _configService: ConfigService,
     private _mediaWatcherService: MediaWatcherService,
-    private _router: Router) {
-  }
+    private _router: Router
+  ) {}
 
   ngOnInit(): void {
     // Set the theme and scheme based on the configuration
     combineLatest([
       this._configService.config,
-      this._mediaWatcherService.onMediaQueryChange$(['(prefers-color-scheme: dark)', '(prefers-color-scheme: light)'])
-    ]).pipe(
-      takeUntil(this._unsubscribeAll),
-      map(([config, mql]) => {
-        const options = {
-          scheme: config.scheme,
-          theme: config.theme
-        };
+      this._mediaWatcherService.onMediaQueryChange$([
+        '(prefers-color-scheme: dark)',
+        '(prefers-color-scheme: light)',
+      ]),
+    ])
+      .pipe(
+        takeUntil(this._unsubscribeAll),
+        map(([config, mql]) => {
+          const options = {
+            scheme: config.scheme,
+            theme: config.theme,
+          };
 
-        // If the scheme is set to 'auto'
-        if (config.scheme === 'auto') {
-          // Decide the scheme using the media query
-          options.scheme = mql.breakpoints['(prefers-color-scheme: dark)'] ? 'dark' : 'light';
-        }
+          // If the scheme is set to 'auto'
+          if (config.scheme === 'auto') {
+            // Decide the scheme using the media query
+            options.scheme = mql.breakpoints['(prefers-color-scheme: dark)']
+              ? 'dark'
+              : 'light';
+          }
 
-        return options;
-      })
-    ).subscribe((options) => {
+          return options;
+        })
+      )
+      .subscribe((options) => {
+        // Store the options
+        this.scheme = options.scheme;
+        this.theme = options.theme;
 
-      // Store the options
-      this.scheme = options.scheme;
-      this.theme = options.theme;
-
-      // Update the scheme and theme
-      this.updateScheme();
-      this.updateTheme();
-    });
-
+        // Update the scheme and theme
+        this.updateScheme();
+        this.updateTheme();
+      });
 
     // Subscribe to media changes
     this._mediaWatcherService.onMediaChange$
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe(({ matchingAliases }) => {
-
         // Check if the screen is small
         this.isScreenSmall = !matchingAliases.includes('md');
       });
@@ -84,11 +90,10 @@ export class SidenavComponent implements OnInit, OnDestroy {
       .subscribe((event: NavigationEvent) => {
         this.navigationObserver(event);
 
-        if (this.isScreenSmall)
-          {this.sidenav.close();}
+        if (this.isScreenSmall) {
+          this.sidenav.close();
+        }
       });
-
-
   }
 
   ngOnDestroy(): void {
@@ -97,20 +102,21 @@ export class SidenavComponent implements OnInit, OnDestroy {
     this._unsubscribeAll.complete();
   }
 
-  private navigationObserver(event: NavigationEvent): void {
-    if (event instanceof NavigationStart)
-      {this.displayProgressBar = true;}
-
-    if (event instanceof NavigationEnd)
-      {this.displayProgressBar = false;}
-  }
-
-  toggleScheme(newScheme: Scheme) {
+  toggleScheme(newScheme: Scheme): void {
     this.scheme = newScheme;
 
     this.updateScheme();
   }
 
+  private navigationObserver(event: NavigationEvent): void {
+    if (event instanceof NavigationStart) {
+      this.displayProgressBar = true;
+    }
+
+    if (event instanceof NavigationEnd) {
+      this.displayProgressBar = false;
+    }
+  }
 
   private updateScheme(): void {
     // Remove class names for all schemes
@@ -120,12 +126,15 @@ export class SidenavComponent implements OnInit, OnDestroy {
     this._document.body.classList.add(this.scheme);
   }
 
-
   private updateTheme(): void {
     // Find the class name for the previously selected theme and remove it
     this._document.body.classList.forEach((className: string) => {
-      if (className.startsWith('theme-'))
-        {this._document.body.classList.remove(className, className.split('-')[1]);}
+      if (className.startsWith('theme-')) {
+        this._document.body.classList.remove(
+          className,
+          className.split('-')[1]
+        );
+      }
     });
 
     // Add class name for the currently selected theme
